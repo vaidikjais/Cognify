@@ -1,48 +1,49 @@
 
 
-Cognify
+# Cognify
 
-Summarize & Chat with Your Files and the Web
+**Summarize & Chat with Your Files and the Web**
 
 Cognify is a Retrieval-Augmented Generation (RAG) application that lets you create collections of documents or websites, generate AI-powered summaries, and chat with your sources — all while keeping answers grounded in your own data.
 
-🎥 Watch the demo on YouTube
+🎥 [Watch the demo on YouTube](https://youtu.be/gE-eSpSz69I)
 
-⸻
+---
 
-✨ Features
-	•	📂 Collections – Organize your knowledge by project or topic.
-	•	📑 Multiple Source Types – Add PDFs, CSVs, TXT files, or URLs into a single knowledge base.
-	•	📝 AI Summaries – Generate clear, concise summaries of your sources.
-	•	💬 Chat with Sources – Ask questions and get grounded answers with citations.
-	•	⚡ Fast & Clean UI – Built with Next.js, Tailwind CSS, and shadcn/ui for a modern experience.
-	•	🧠 OpenAI Embeddings – Uses text-embedding-3-small (1536 dimensions) for accurate retrieval.
-	•	📦 Vector Search – Powered by Qdrant, running locally in Docker.
+## ✨ Features
+- 📂 **Collections** – Organize your knowledge by project or topic.  
+- 📑 **Multiple Source Types** – Add PDFs, CSVs, TXT files, or URLs into a single knowledge base.  
+- 📝 **AI Summaries** – Generate clear, concise summaries of your sources.  
+- 💬 **Chat with Sources** – Ask questions and get grounded answers with citations.  
+- ⚡ **Fast & Clean UI** – Built with **Next.js**, **Tailwind CSS**, and **shadcn/ui** for a modern experience.  
+- 🧠 **OpenAI Embeddings** – Uses `text-embedding-3-small` (1536 dimensions) for accurate retrieval.  
+- 📦 **Vector Search** – Powered by **Qdrant**, running locally in Docker.  
 
-⸻
+---
 
-🖼️ Screenshots
+## 🖼️ Screenshots
 
-Collections Page	Studio – Sources	Studio – Summary + Chat
-		
+| Collections Page | Studio – Sources | Studio – Summary + Chat |
+|------------------|------------------|--------------------------|
+| ![Collections](https://via.placeholder.com/250x150?text=Collections) | ![Sources](https://via.placeholder.com/250x150?text=Sources) | ![Chat](https://via.placeholder.com/250x150?text=Summary+Chat) |
 
-(replace placeholders with your actual screenshots if you want)
+*(replace placeholders with your actual screenshots if you want)*
 
-⸻
+---
 
-🛠️ Tech Stack
-	•	Frontend: Next.js (App Router), React, Tailwind CSS v3, shadcn/ui
-	•	Backend: Next.js API routes, Node.js
-	•	AI/LLM: OpenAI API (chat + embeddings)
-	•	Vector DB: Qdrant (local Docker)
-	•	Other: pdf.js, Papaparse, Mammoth, RecursiveCharacterTextSplitter
+## 🛠️ Tech Stack
+- **Frontend:** Next.js (App Router), React, Tailwind CSS v3, shadcn/ui  
+- **Backend:** Next.js API routes, Node.js  
+- **AI/LLM:** OpenAI API (chat + embeddings)  
+- **Vector DB:** Qdrant (local Docker)  
+- **Other:** pdf.js, Papaparse, Mammoth, RecursiveCharacterTextSplitter  
 
-⸻
+---
 
-⚙️ Getting Started
+## ⚙️ Getting Started
 
-1. Clone the repository
-
+### 1. Clone the repository
+```bash
 git clone https://github.com/yourusername/cognify.git
 cd cognify
 
@@ -110,5 +111,7 @@ This project demonstrates my ability to:
 
 📄 License
 
-MIT License 
+MIT License
+
+---
 
