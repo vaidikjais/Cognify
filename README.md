@@ -1,4 +1,3 @@
-````markdown
 # Cognify
 
 **Summarize & Chat with Your Files and the Web**
@@ -35,7 +34,6 @@ Cognify is a Retrieval-Augmented Generation (RAG) application that lets you crea
 ```bash
 git clone [https://github.com/yourusername/cognify.git](https://github.com/yourusername/cognify.git)
 cd cognify
-````
 
 ### 2\. Install dependencies
 
