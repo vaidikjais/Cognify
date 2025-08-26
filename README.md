@@ -1,36 +1,114 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
 
-First, run the development server:
+Cognify
 
-```bash
+Summarize & Chat with Your Files and the Web
+
+Cognify is a Retrieval-Augmented Generation (RAG) application that lets you create collections of documents or websites, generate AI-powered summaries, and chat with your sources — all while keeping answers grounded in your own data.
+
+🎥 Watch the demo on YouTube
+
+⸻
+
+✨ Features
+	•	📂 Collections – Organize your knowledge by project or topic.
+	•	📑 Multiple Source Types – Add PDFs, CSVs, TXT files, or URLs into a single knowledge base.
+	•	📝 AI Summaries – Generate clear, concise summaries of your sources.
+	•	💬 Chat with Sources – Ask questions and get grounded answers with citations.
+	•	⚡ Fast & Clean UI – Built with Next.js, Tailwind CSS, and shadcn/ui for a modern experience.
+	•	🧠 OpenAI Embeddings – Uses text-embedding-3-small (1536 dimensions) for accurate retrieval.
+	•	📦 Vector Search – Powered by Qdrant, running locally in Docker.
+
+⸻
+
+🖼️ Screenshots
+
+Collections Page	Studio – Sources	Studio – Summary + Chat
+		
+
+(replace placeholders with your actual screenshots if you want)
+
+⸻
+
+🛠️ Tech Stack
+	•	Frontend: Next.js (App Router), React, Tailwind CSS v3, shadcn/ui
+	•	Backend: Next.js API routes, Node.js
+	•	AI/LLM: OpenAI API (chat + embeddings)
+	•	Vector DB: Qdrant (local Docker)
+	•	Other: pdf.js, Papaparse, Mammoth, RecursiveCharacterTextSplitter
+
+⸻
+
+⚙️ Getting Started
+
+1. Clone the repository
+
+git clone https://github.com/yourusername/cognify.git
+cd cognify
+
+2. Install dependencies
+
+npm install
+
+3. Start Qdrant via Docker
+
+npm run qdrant:up
+
+Qdrant will be available at http://localhost:6333.
+
+4. Create .env.local
+
+OPENAI_API_KEY=your_openai_api_key
+QDRANT_URL=http://localhost:6333
+QDRANT_API_KEY=   # leave blank for local
+EMBEDDING_MODEL=text-embedding-3-small
+
+5. Run the app
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+⸻
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+🚀 Usage Flow
+	1.	Landing Page → Learn about Cognify and get started.
+	2.	Collections Page → Create or select a collection.
+	3.	Studio
+	•	Add sources (Text, File, or URL).
+	•	View & manage sources.
+	•	Generate AI summaries.
+	•	Chat with your knowledge base.
 
-## Learn More
+⸻
 
-To learn more about Next.js, take a look at the following resources:
+📹 Demo
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+▶️ Watch the full demo on YouTube
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+⸻
 
-## Deploy on Vercel
+🎯 Why This Project?
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+I built Cognify to explore retrieval-augmented generation (RAG) and create a practical, personal knowledge tool.
+This project demonstrates my ability to:
+	•	Design full-stack applications (frontend + backend).
+	•	Integrate LLMs with vector databases.
+	•	Build clean, user-friendly interfaces with shadcn/ui.
+	•	Deploy and work with containerized services like Qdrant.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+⸻
+
+📌 Roadmap / Future Work
+	•	✅ File (PDF/CSV/TXT) and URL support
+	•	✅ AI summaries and chat with sources
+	•	⬜ Authentication for private collections
+	•	⬜ Export chat and summaries
+	•	⬜ Deployment (Vercel + managed Qdrant)
+
+⸻
+
+📄 License
+
+MIT License 
+

@@ -1,26 +1,135 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Modern dark-brown + chrome-yellow theme */
+    --background: 28 41% 7%; /* deep brown */
+    --foreground: 30 60% 96%; /* warm off-white */
+
+    --card: 28 38% 10%;
+    --card-foreground: 30 60% 96%;
+
+    --popover: 28 38% 10%;
+    --popover-foreground: 30 60% 96%;
+
+    --primary: 50 100% 50%; /* chrome yellow */
+    --primary-foreground: 28 41% 7%;
+
+    --secondary: 27 35% 24%;
+    --secondary-foreground: 30 60% 95%;
+
+    --muted: 28 30% 16%;
+    --muted-foreground: 28 25% 65%;
+
+    --accent: 26 40% 20%;
+    --accent-foreground: 30 60% 96%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 28 25% 28%;
+    --input: 28 25% 28%;
+    --ring: 50 100% 50%;
+
+    --chart-1: 50 100% 50%;
+    --chart-2: 28 30% 30%;
+    --chart-3: 26 45% 40%;
+    --chart-4: 12 60% 45%;
+    --chart-5: 0 70% 50%;
+
+    --radius: 14px;
+  }
+
+  .dark {
+    /* Slightly deeper variant for explicit .dark usage */
+    --background: 28 42% 5%;
+    --foreground: 30 60% 96%;
+    --card: 28 38% 8%;
+    --card-foreground: 30 60% 96%;
+    --popover: 28 38% 8%;
+    --popover-foreground: 30 60% 96%;
+    --primary: 50 100% 52%;
+    --primary-foreground: 28 42% 6%;
+    --secondary: 27 35% 22%;
+    --secondary-foreground: 30 60% 95%;
+    --muted: 28 30% 14%;
+    --muted-foreground: 28 22% 64%;
+    --accent: 26 40% 18%;
+    --accent-foreground: 30 60% 96%;
+    --destructive: 0 62% 34%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 28 24% 24%;
+    --input: 28 24% 24%;
+    --ring: 50 100% 50%;
+    --chart-1: 50 100% 52%;
+    --chart-2: 28 30% 28%;
+    --chart-3: 26 45% 38%;
+    --chart-4: 12 60% 43%;
+    --chart-5: 0 70% 48%;
+  }
+
+  /* Map vars to Tailwind utilities */
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
   }
 }
+/* subtle focus style for visibility */
+:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px hsl(var(--ring) / 0.6);
+}
+html {
+  /* Firefox */
+  scrollbar-color: hsl(var(--muted-foreground) / 0.5) hsl(var(--muted) / 0.6);
+  scrollbar-width: thin;
+}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* WebKit (Chrome, Edge, Safari) */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-track {
+  background: hsl(var(--muted) / 0.6);
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--primary) / 0.85),
+    hsl(var(--accent) / 0.9)
+  );
+  border: 2px solid hsl(var(--muted) / 0.6); /* creates a gap around thumb */
+  border-radius: 999px;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--primary) / 1),
+    hsl(var(--accent) / 1)
+  );
+}
+
+/* Optional: a utility class for extra-contrast scrollbars on key panes */
+.themed-scroll {
+  /* Firefox */
+  scrollbar-color: hsl(var(--primary)) hsl(var(--card));
+  scrollbar-width: thin;
+}
+.themed-scroll::-webkit-scrollbar-track {
+  background: hsl(var(--card));
+}
+.themed-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    to bottom,
+    hsl(var(--primary)),
+    hsl(var(--accent))
+  );
+  border: 2px solid hsl(var(--card));
+  border-radius: 999px;
 }
